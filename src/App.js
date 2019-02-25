@@ -11,8 +11,8 @@ class App extends Component {
     this.state = {
       newTodo: 'test',
       todoList: [
-        {id:1, title:'这是第一个代办'},
-        {id:2, title:'这是第二个代办'},
+        {id:1, title:'第一个代办'},
+        {id:2, title:'第二个代办'},
       ]
     }
   };
