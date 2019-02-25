@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TodoInput from './TodoInput';
-// import TodoItem from 'TodoItem';
+import TodoItem from './TodoItem';
 import './App.css';
 
 class App extends Component {
@@ -9,13 +9,18 @@ class App extends Component {
     this.state = {
       newTodo: 'test',
       todoList: [
-        {id:1, title:'这是第一个代办'}
+        {id:1, title:'这是第一个代办'},
+        {id:2, title:'这是第二个代办'},
       ]
     }
   };
   render() {
     let todos = this.state.todoList.map((item,index)=>{
-      return <li>{item.title}</li>;
+      return (
+        <li>
+          <TodoItem todo={item} />
+        </li>
+      );
     });
     return (
       <div className="App">
