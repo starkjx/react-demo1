@@ -30,6 +30,7 @@ class App extends Component {
       newTodo: '',
       todoList: this.state.todoList
     })
+    // console.log(this.state);
   };
   changeTitle(event){
     this.setState({
@@ -46,9 +47,10 @@ class App extends Component {
     this.setState(this.state);
   };
   onSignUpOrSignIn(user){
-    let stateCopy = JSON.parse(JSON.stringify(this.state)) 
+    let stateCopy = JSON.parse(JSON.stringify(this.state))
     stateCopy.user = user
     this.setState(stateCopy)
+    //console.log(stateCopy)
   }
   onsignOut(){
     signOut();
